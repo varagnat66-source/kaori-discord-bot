@@ -37,7 +37,7 @@ class Promo(commands.Cog):
         await ctx.reply(embed=list_embed)
 
     #aviso de promoção individual e automatico
-    @tasks.loop(minutes=1)
+    @tasks.loop(minutes=50)
     async def minha_tarefa(self):
         url ="https://www.cheapshark.com/api/1.0/deals?storeID=1&onSale=1&sortBy=Savings&pageSize=10"
         headers = {"User-Agent": f"KaoriBot/1.0 ({self.CONTATO})"}
